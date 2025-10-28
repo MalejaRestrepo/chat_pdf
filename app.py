@@ -9,18 +9,18 @@ from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 import platform
 
-# --- Estilos con degradados fríos ---
+# --- Estilos fríos con degradados ---
 st.markdown("""
     <style>
         /* Fondo general */
         .stApp {
-            background: linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 50%, #f3e5f5 100%);
+            background: linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 40%, #f3e5f5 100%);
             font-family: 'Poppins', sans-serif;
         }
 
         /* Título principal */
         h1 {
-            background: linear-gradient(90deg, #4f6da3, #7c8dc3);
+            background: linear-gradient(90deg, #4b6cb7, #6a85b6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: center;
@@ -31,7 +31,7 @@ st.markdown("""
 
         /* Subtítulos */
         h2, h3 {
-            color: #607d8b;
+            color: #5c6bc0;
             font-weight: 600;
         }
 
@@ -39,7 +39,7 @@ st.markdown("""
         section[data-testid="stSidebar"] {
             background: linear-gradient(180deg, #e8eaf6 0%, #e3f2fd 100%);
             border-radius: 15px;
-            color: #455a64;
+            color: #37474f;
         }
 
         /* Cuadros de texto */
@@ -56,7 +56,7 @@ st.markdown("""
             border-radius: 10px !important;
             border: none !important;
             font-weight: 600 !important;
-            box-shadow: 0px 4px 10px rgba(100, 149, 237, 0.3);
+            box-shadow: 0px 4px 12px rgba(100, 149, 237, 0.35);
         }
 
         button[kind="primary"]:hover {
@@ -69,7 +69,7 @@ st.markdown("""
             margin-left: auto;
             margin-right: auto;
             border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(90, 130, 180, 0.4);
+            box-shadow: 0px 0px 15px rgba(80, 120, 180, 0.45);
         }
 
         /* Cuadros de información */
@@ -90,9 +90,9 @@ st.markdown("""
 st.title('Generación Aumentada por Recuperación (RAG)')
 st.write(f"Versión de Python: **{platform.python_version()}**")
 
-# --- Imagen decorativa (cambia el nombre a 'cinna.jpg') ---
+# --- Imagen decorativa (cambia el nombre a 'cinna.jpeg') ---
 try:
-    image = Image.open('cinna.jpg')
+    image = Image.open('cinna.jpeg')
     st.image(image, width=350)
 except Exception as e:
     st.warning(f"No se pudo cargar la imagen: {e}")
